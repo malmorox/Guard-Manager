@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de guardias</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-
+    <!-- popup para logearte. Sale nada mas entrar a la página -->
+    <div class="login-popup">
+        <div class="login-popup-container">
+            <h2 id="popup-title"> Inicia sesión como profesor o administrador </h2>
+            <form action="/" method="post">
+                <input type="text" id="username-field">
+                <input type="text" id="password-field">
+                <input type="button" id="login-button" value="Entrar">
+            </form>
+        </div>
+    </div>
+    <!-- página con la tabla del horario de guardias -->
+    <h1> Gestor de guardias</h1>
+    <table class="guards-schedule"> </table>
 </body>
 </html>

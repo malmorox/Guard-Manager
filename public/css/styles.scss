@@ -1,0 +1,59 @@
+.login-popup {
+    background: rgba(0, 0, 0, 0.5);
+    @include center-flexbox;
+    /* NO ME DEJABA USAR LA FUNCION NOSE PORQUE */
+    /*@include center-elements(map-get($structure, '$positionFixed'));*/
+    @include center-popup;
+    visibility: hidden;
+    z-index: 9999;
+}
+
+.login-popup.active {
+    visibility: visible;
+}
+
+.login-popup-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #F8F8F8;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    gap: 20px;
+}
+
+#popup-title {
+    margin: 0;
+    padding: 0;
+    font-family: map-get($fonts, '$popupText');
+}
+
+#user-field {
+    margin: 0 5px 0 0;
+    padding: 10px 15px;
+    width: 200px;
+    height: 24px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+#task-add-button {
+    padding: 11px 15px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background: grey;
+    border: 2px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    @include button-transition;
+}
+
+#task-add-button:hover {
+    background: #575757;
+    border: 2px solid #575757;
+}
