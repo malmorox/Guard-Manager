@@ -1,0 +1,39 @@
+{
+    "users": [
+        {
+            "username": "",
+            "password": "",
+            "type": "teacher"
+        },
+        {
+            "username": "",
+            "password": "",
+            "type": "teacher"
+        },
+        {
+            "username": "",
+            "password": "",
+            "type": "admin"
+        },
+        {
+            "username": "",
+            "password": "",
+            "type": "teacher"
+        },
+        {
+            "username": "",
+            "password": "",
+            "type": "teacher"
+        },
+        {
+            "username": "",
+            "password": "",
+            "type": "admin"
+        },
+        {
+            "username": "",
+            "password": "",
+            "type": "teacher"
+        }
+    ]
+}
