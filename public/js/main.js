@@ -6,7 +6,7 @@ loginButton.addEventListener("click", function () {
     fetch("users.json")
         .then(response => response.json())
         .then(users => {
-            var found = users.some(user => user.username === username && user.password === password);
+            let found = users.some(user => user.username === username && user.password === password);
             if (found) {
                 document.querySelector(".login-popup").style.display = "none";
             } else {

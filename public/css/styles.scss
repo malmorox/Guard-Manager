@@ -1,8 +1,32 @@
+@mixin center-flexbox {
+    display: map-get($structure, '$displayFlex');
+    justify-content: map-get($structure, '$center');
+    align-items: map-get($structure, '$center');
+}
+
+@mixin space-between-flexbox {
+    display: map-get($structure, '$displayFlex');
+    justify-content: map-get($structure, '$spaceBetween');;
+    align-items: map-get($structure, '$center');
+}
+
+@mixin center-popup {
+    position: map-get($structure, '$positionFixed');;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@mixin button-transition {
+    transition-property: background, border;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
 .login-popup {
     background: rgba(0, 0, 0, 0.5);
     @include center-flexbox;
-    /* NO ME DEJABA USAR LA FUNCION NOSE PORQUE */
-    /*@include center-elements(map-get($structure, '$positionFixed'));*/
     @include center-popup;
     visibility: hidden;
     z-index: 9999;
