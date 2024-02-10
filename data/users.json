@@ -1,11 +1,13 @@
 {
     "users": [
         {
-            "username": "",
-            "password": "",
+            "name": "Pepe García",
+            "username": "pepitogarcia",
+            "password": "contra",
             "type": "teacher"
         },
         {
+            "name": "Pepe García",
             "username": "",
             "password": "",
             "type": "teacher"

@@ -13,14 +13,30 @@
         <div class="login-popup-container">
             <h2 id="popup-title"> Inicia sesión como profesor o administrador </h2>
             <form action="/" method="post">
-                <input type="text" id="username-field">
-                <input type="text" id="password-field">
+                <input type="text" id="username-field" placeholder="Nombre de usuarios">
+                <input type="text" id="password-field" placeholder="Contraseña">
                 <input type="button" id="login-button" value="Entrar">
             </form>
         </div>
     </div>
     <!-- página con la tabla del horario de guardias -->
     <h1> Gestor de guardias</h1>
-    <table class="guards-schedule"> </table>
+    <div class="guards-container">
+        <table class="guards-schedule"> </table>
+        <div class="guards-admin-panel">
+            <form id="manage-guards">
+                <label for="alumno-nombre"> Nombre del alumno: <br>
+                    <input type="text" id="alumno-nombre" required>
+                </label> <br><br>
+                <label for="alumno-edad"> Edad del alumno: <br>
+                    <input type="number" id="alumno-edad" required>
+                </label> <br><br>
+                <label for="alumno-titulacion"> Titulación del alumno: <br>
+                    <input type="text" id="alumno-titulacion" required>
+                </label> <br><br>
+                <button type="submit"> Agregar alumno </button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
