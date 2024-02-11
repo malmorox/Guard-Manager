@@ -17,13 +17,26 @@ LOGIN_FORM.addEventListener('submit', function (e) {
                     document.querySelector('.guards-admin-panel').style.display = "flex";
                 }
             } else {
-                document.getElementById('password-field').value = '';
-                alert("Nombre de usuario o contraseña incorrectos");
+                handleIncorrectCredentials();
             }
         } else {
-            console.error("Error al realizar la solicitud");
+            handleError(XHR.status);
         }
     };
     const data = JSON.stringify({ username: username, password: password });
     XHR.send(data);
 });
+
+function handleIncorrectCredentials() {
+    document.getElementById('password-field').value = '';
+    alert("Nombre de usuario o contraseña incorrectos");
+}
+
+function handleError(status) {
+    if (status === 401) {
+        handleIncorrectCredentials();
+    } else {
+        //alert("Error al realizar la solicitud");
+        console.error("Error al realizar la solicitud");
+    }
+}

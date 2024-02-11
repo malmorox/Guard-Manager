@@ -1,5 +1,6 @@
 function generateSchedule() {
     const SCHEDULE = document.querySelector('.guards-schedule tbody');
+    // array con las horas de las clases
     const CLASS_HOURS = ['16:00 - 16:55', '16:55 - 17:50', '17:50 - 18:45', '19:10 - 20:05', '20:05 - 21:00', '21:00 - 21:55'];
     const DAY_LETTERS = ['L', 'M', 'X', 'J', 'V'];
 

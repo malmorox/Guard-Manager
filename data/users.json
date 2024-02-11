@@ -13,29 +13,32 @@
             "type": "teacher"
         },
         {
-            "name": "Administrador",
             "username": "admin",
             "password": "superuser",
             "type": "admin"
         },
         {
-            "username": "",
-            "password": "",
+            "name": "Joaquín Álvarez",
+            "username": "erjuaqui",
+            "password": "porraycarajillo",
             "type": "teacher"
         },
         {
-            "username": "",
-            "password": "",
+            "name": "Jorge Dueñas",
+            "username": "jorgeduenaslerin",
+            "password": "espabilachaval",
             "type": "teacher"
         },
         {
-            "username": "",
-            "password": "",
-            "type": "admin"
+            "name": "Susana Gil",
+            "username": "lasusi",
+            "password": "examensorpresa",
+            "type": "teacher"
         },
         {
-            "username": "",
-            "password": "",
+            "name": "Carmen Sánchez",
+            "username": "pintalastuplas",
+            "password": "puntoenboca",
             "type": "teacher"
         }
     ]
