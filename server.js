@@ -14,10 +14,22 @@ APP.get('/', (req, res) => {
     res.sendFile(__dirname + PUBLIC_INDEX);
 });
 
-APP.get('/users', (req, res) => {
+APP.post('/login', (req, res) => {
+    const { username, password } = req.body;
     FS.readFile(__dirname + JSON_USERS_FILE, (err, data) => {
-        if (err) throw err;
-        res.json(JSON.parse(data));
+        if (err) {
+            //console.error("Error");
+            res.status(500).json({ success: false, message: "Error interno del servidor" });
+            return;
+        }
+        const USERS = JSON.parse(data).users;
+        const FOUND_USER = USERS.find(user => user.username === username && user.password === password);
+        if (FOUND_USER) {
+            //console.error("Usuario correcto");
+            res.json({ success: true, user: FOUND_USER });
+        } else {
+            res.status(401).json({ success: false, message: "Credenciales incorrectas" });
+        }
     });
 });
 

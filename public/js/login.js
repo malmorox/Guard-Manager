@@ -1,25 +1,29 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const LOGIN_BUTTON = document.getElementById('login-button')
-    LOGIN_BUTTON.addEventListener('click', function () {
-        let username = document.getElementById('username-field').value;
-        let password = document.getElementById('password-field').value;
+const LOGIN_FORM = document.getElementById('login-form');
+LOGIN_FORM.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let username = document.getElementById('username-field').value;
+    let password = document.getElementById('password-field').value;
 
-        fetch("/users")
-            .then(response => response.json())
-            .then(users => {
-                let foundUser = users.find(user => user.username === username && user.password === password);
-                if (foundUser) {
-                    document.querySelector(".login-popup").style.visibility = "hidden";
-                    if (foundUser.type === 'admin') {
-                        document.querySelector(".guards-admin-panel").style.visibility = "flex";
-                    }
-                } else {
-                    password = '';
-                    alert("Nombre de usuario o contraseña incorrectos");
+    const XHR = new XMLHttpRequest();
+    XHR.open("POST", "/login", true);
+    XHR.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+    XHR.onload = function() {
+        if (XHR.status === 200) {
+            const data = JSON.parse(XHR.responseText);
+            if (data.success) {
+                document.querySelector('.login-popup').style.visibility = "hidden";
+                if (data.user.type === 'admin') {
+                    document.querySelector('.guards-admin-panel').style.display = "flex";
                 }
-            })
-            .catch(error => {
-                console.error("Error al obtener los datos de los usuarios:", error);
-            });
-    });
+            } else {
+                document.getElementById('password-field').value = '';
+                alert("Nombre de usuario o contraseña incorrectos");
+            }
+        } else {
+            console.error("Error al realizar la solicitud");
+        }
+    };
+    const data = JSON.stringify({ username: username, password: password });
+    XHR.send(data);
 });
