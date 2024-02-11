@@ -1,19 +1,20 @@
-const loginButton = document.getElementById("login-button")
-loginButton.addEventListener("click", function () {
-    let username = document.getElementById("user-field").value;
-    let password = document.getElementById("password-field").value;
+document.addEventListener('DOMContentLoaded', function() {
+    function assignGuard(guard) {
 
-    fetch("users.json")
+    }
+
+    fetch('/users')
         .then(response => response.json())
-        .then(users => {
-            let found = users.some(user => user.username === username && user.password === password);
-            if (found) {
-                document.querySelector(".login-popup").style.display = "none";
-            } else {
-                alert("Nombre de usuario o contraseña incorrectos");
-            }
-        })
-        .catch(error => {
-            console.error("Error al obtener los datos de los usuarios:", error);
+        .then(data => {
+            const SELECT_TEACHERS = document.getElementById('guard-teacher');
+
+            const TEACHERS = data.users.filter(user => user.type === 'teacher');
+
+            TEACHERS.forEach(teacher => {
+                const OPTION = document.createElement('option');
+                OPTION.value = teacher.name;
+                OPTION.textContent = teacher.name;
+                SELECT_TEACHERS.appendChild(OPTION);
+            });
         });
 });

@@ -1,0 +1,48 @@
+$colors: (
+        '$headerColor': #e38112,
+        '$mainColor': #ececec,
+        '$addTaskButtonColor': #f38a14,
+        '$tasksHeadColor': #d55d00,
+        '$tasksBackgroundColor': #fcfcfc,
+        '$taskEditButton': #22b040,
+        '$taskDeleteButton': #c43939,
+);
+
+$structure: (
+        '$displayFlex': flex,
+        '$center': center,
+        '$spaceBetween': space-between,
+        '$positionFixed': fixed,
+        '$positionAbsolute': absolute,
+        '$positionRelative': relative,
+);
+
+$dimensions: (
+        '$100percent': 100%,
+        '$headerSize': 34px,
+        '$taskHeadSize': 20px,
+);
+
+@font-face {
+  font-family: 'Nexa-Heavy';
+  src: url(../../fonts/Nexa-Heavy.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Tango-Sans';
+  src: url(../../fonts/TangoSans.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Renogare-Soft';
+  src: url(../../fonts/RenogareSoft-Regular.ttf) format('truetype');
+}
+
+$fonts: (
+        '$proyectTitle': 'Nexa-Heavy',
+        '$tasksHeadTitle': 'Renogare-Soft',
+        '$popupText': 'Nexa-Heavy',
+        '$taskText': '',
+);
+
+

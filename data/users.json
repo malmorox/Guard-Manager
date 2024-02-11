@@ -3,13 +3,13 @@
         {
             "name": "Pepe García",
             "username": "pepitogarcia",
-            "password": "contra",
+            "password": "contra123456",
             "type": "teacher"
         },
         {
-            "name": "Pepe García",
-            "username": "",
-            "password": "",
+            "name": "Ana Rodríguez",
+            "username": "anardgez",
+            "password": "fili",
             "type": "teacher"
         },
         {

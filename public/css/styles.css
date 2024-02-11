@@ -1,3 +1,116 @@
+@font-face {
+  font-family: "Nexa-Heavy";
+  src: url(../../fonts/Nexa-Heavy.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Tango-Sans";
+  src: url(../../fonts/TangoSans.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Renogare-Soft";
+  src: url(../../fonts/RenogareSoft-Regular.ttf) format("truetype");
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ececec;
+}
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #10a8a4;
+}
+
+#proyect-title {
+  text-align: center;
+  color: white;
+}
+
+.login-popup {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: visible;
+  z-index: 9999;
+}
+
+.login-popup-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #F8F8F8;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  gap: 20px;
+}
+
+#popup-title {
+  margin: 0;
+  padding: 0;
+  font-family: "Nexa-Heavy";
+}
+
+.login-fields {
+  padding: 10px 15px;
+  width: 200px;
+  height: 24px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+#login-button {
+  padding: 11px 15px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background: grey;
+  border: 2px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-property: background, border;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+#login-button:hover {
+  background: #575757;
+  border: 2px solid #575757;
+}
+
+.guards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guards-schedule {
+  border: 1px solid black;
+}
+.guards-schedule th, .guards-schedule td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+.guards-admin-panel {
+  display: none;
+  flex-direction: column;
+}
+
+.guard-fields {
+  flex: 1;
+}
 
 /*# sourceMappingURL=styles.css.map */

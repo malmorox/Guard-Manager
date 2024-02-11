@@ -2,6 +2,7 @@
   "dependencies": {
     "express": "^4.18.2",
     "fetch": "^1.1.0",
+    "sass": "^1.70.0",
     "tree": "^0.1.3"
   }
 }

@@ -1,3 +1,5 @@
+@import 'content/variables';
+
 @mixin center-flexbox {
     display: map-get($structure, '$displayFlex');
     justify-content: map-get($structure, '$center');
@@ -24,16 +26,28 @@
     transition-timing-function: ease;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: map-get($colors, '$mainColor');
+}
+
+header {
+    @include center-flexbox;
+    background: #10a8a4;
+}
+
+#proyect-title {
+    text-align: center;
+    color: white;
+}
+
 .login-popup {
     background: rgba(0, 0, 0, 0.5);
     @include center-flexbox;
     @include center-popup;
-    visibility: hidden;
-    z-index: 9999;
-}
-
-.login-popup.active {
     visibility: visible;
+    z-index: 9999;
 }
 
 .login-popup-container {
@@ -54,8 +68,7 @@
     font-family: map-get($fonts, '$popupText');
 }
 
-#user-field {
-    margin: 0 5px 0 0;
+.login-fields {
     padding: 10px 15px;
     width: 200px;
     height: 24px;
@@ -65,7 +78,7 @@
     border-radius: 5px;
 }
 
-#task-add-button {
+#login-button {
     padding: 11px 15px;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
@@ -77,7 +90,33 @@
     @include button-transition;
 }
 
-#task-add-button:hover {
+#login-button:hover {
     background: #575757;
     border: 2px solid #575757;
+}
+
+.guards-container {
+    @include center-flexbox;
+}
+
+.guards-schedule {
+    border: 1px solid black;
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+}
+
+.guards-admin-panel {
+    display: none;
+    flex-direction: column;
+}
+
+.guard-fields {
+    flex: 1;
+}
+
+#guard-add-button {
+
 }

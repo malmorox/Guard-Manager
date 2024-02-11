@@ -3,38 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor de guardias</title>
+    <title> Gestor de guardias </title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/schedule.js" defer></script>
+    <script src="js/login.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <!-- popup para logearte. Sale nada mas entrar a la página -->
     <div class="login-popup">
         <div class="login-popup-container">
-            <h2 id="popup-title"> Inicia sesión como profesor o administrador </h2>
-            <form action="/" method="post">
-                <input type="text" id="username-field" placeholder="Nombre de usuarios">
-                <input type="text" id="password-field" placeholder="Contraseña">
+            <h2 id="popup-title"> Inicia sesión </h2>
+            <form action="/" method="post" id="login-guards">
+                <label for="username-field"></label>
+                <input type="text" class="login-fields" id="username-field" placeholder="Nombre de usuarios">
+
+                <label for="password-field"></label>
+                <input type="password" class="login-fields" id="password-field" placeholder="Contraseña">
+
                 <input type="button" id="login-button" value="Entrar">
             </form>
         </div>
     </div>
     <!-- página con la tabla del horario de guardias -->
-    <h1> Gestor de guardias</h1>
+    <header>
+        <h1 id="proyect-title"> Gestor de guardias </h1>
+    </header>
     <div class="guards-container">
-        <table class="guards-schedule"> </table>
+        <table class="guards-schedule">
+            <thead>
+            <tr>
+                <th> Hora </th>
+                <th> Lunes </th>
+                <th> Martes </th>
+                <th> Miércoles </th>
+                <th> Jueves </th>
+                <th> Viernes </th>
+            </tr>
+            </thead>
+            <tbody> </tbody>
+        </table>
+        <!-- el panel de administrador se mostrará solo si se ha accedido con un usuario admin -->
         <div class="guards-admin-panel">
-            <form id="manage-guards">
-                <label for="alumno-nombre"> Nombre del alumno: <br>
-                    <input type="text" id="alumno-nombre" required>
-                </label> <br><br>
-                <label for="alumno-edad"> Edad del alumno: <br>
-                    <input type="number" id="alumno-edad" required>
-                </label> <br><br>
-                <label for="alumno-titulacion"> Titulación del alumno: <br>
-                    <input type="text" id="alumno-titulacion" required>
-                </label> <br><br>
-                <button type="submit"> Agregar alumno </button>
+            <form action="" method="" id="manage-guards">
+                <label for="guard-teacher"> Profesor: </label> <br>
+                <select class="guard-fields" id="guard-teacher" required>
+                    <option selected disabled> Seleccione al profesor </option>
+                </select>
+
+                <label for="guard-day"> Día: </label> <br>
+                <select class="guard-fields"  id="guard-day" required> </select>
+
+                <label for="guard-hour"> Hora: </label> <br>
+                <select class="guard-fields" id="guard-hour" required> </select>
+
+                <label for="guard-place"> Lugar: </label> <br>
+                <input type="text" class="guard-fields" id="guard-place" required>
+
+                <button type="submit" id="guard-add-button"> Agregar alumno </button>
             </form>
         </div>
     </div>
