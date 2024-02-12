@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="js/schedule.js" defer></script>
     <script src="js/login.js" defer></script>
+    <script src="js/admin-functionality.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -21,7 +22,7 @@
                 <label for="password-field"></label>
                 <input type="password" class="login-fields" id="password-field" placeholder="Contraseña">
 
-                <input type="submit" id="login-button" value="Entrar">
+                <button type="submit" id="login-button"> Entrar </button>
             </form>
         </div>
     </div>
@@ -45,22 +46,27 @@
         </table>
         <!-- el panel de administrador se mostrará solo si se ha accedido con un usuario admin -->
         <div class="guards-admin-panel">
-            <form action="" method="" id="manage-guards">
+            <h3 id="guards-admin-title"> Asigna un guardia </h3>
+            <form action="" method="post" id="manage-guards">
                 <label for="guard-teacher"> Profesor: </label> <br>
                 <select class="guard-fields" id="guard-teacher" required>
                     <option selected disabled> Seleccione al profesor </option>
                 </select>
 
                 <label for="guard-day"> Día: </label> <br>
-                <select class="guard-fields"  id="guard-day" required> </select>
+                <select class="guard-fields"  id="guard-day" required>
+                    <option selected disabled> Seleccione el día </option>
+                </select>
 
                 <label for="guard-hour"> Hora: </label> <br>
-                <select class="guard-fields" id="guard-hour" required> </select>
+                <select class="guard-fields" id="guard-hour" required>
+                    <option selected disabled> Seleccione la hora </option>
+                </select>
 
                 <label for="guard-place"> Lugar: </label> <br>
                 <input type="text" class="guard-fields" id="guard-place" required>
 
-                <button type="submit" id="guard-add-button"> Agregar alumno </button>
+                <button type="submit" id="guard-add-button"> Agregar guardia </button>
             </form>
         </div>
     </div>

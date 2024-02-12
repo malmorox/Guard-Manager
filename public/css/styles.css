@@ -17,6 +17,7 @@ body {
 }
 
 header {
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +79,7 @@ header {
   color: #fff;
   border: 2px solid #0d95ad;
   border-radius: 3px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   cursor: pointer;
   transition-property: background, border;
   transition-duration: 0.3s;
@@ -91,12 +92,15 @@ header {
 }
 
 .guards-container {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row-reverse;
 }
 
 .guards-schedule {
+  width: 1fr;
   border: 1px solid black;
 }
 .guards-schedule th, .guards-schedule td {
@@ -106,12 +110,30 @@ header {
 }
 
 .guards-admin-panel {
+  padding: 20px;
   display: none;
   flex-direction: column;
+  width: 200px;
+  background: white;
+}
+
+#guards-admin-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.guard-fields,
+#guard-add-button {
+  width: 100%;
 }
 
 .guard-fields {
-  flex: 1;
+  margin-bottom: 20px;
+}
+
+#guard-add-button {
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=styles.css.map */
